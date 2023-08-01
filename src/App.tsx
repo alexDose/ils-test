@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Map} from "./components/Map/Map";
+import {TableComponent} from "./components/Table/Table";
+import styles from "./styles/App.module.scss"
+import {Layout, Spin} from "antd";
+import {Content, Header} from "antd/es/layout/layout";
+import {useAppSelector} from "./redux/store";
+import {getIsLoading} from "./redux/selectors/appSelectors";
+import {ErrorNotification} from "./components/ErrorNotification/ErrorNotification";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const isLoading = useAppSelector(getIsLoading)
+
+    return(
+        <Layout>
+            <ErrorNotification/>
+            <Header className={styles.header}>ILS-test</Header>
+            {isLoading && <Spin size='large'/>}
+            <Content className={styles.content}>
+                <TableComponent/>
+                <Map/>
+            </Content>
+        </Layout>
+    );
 }
 
 export default App;

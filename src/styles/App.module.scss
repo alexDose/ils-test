@@ -1,0 +1,17 @@
+.header {
+  height: 60px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  background-color: rgba(207, 239, 250, 0.84);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  padding-top: 10px;
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 70px);
+}
