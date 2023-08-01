@@ -1,5 +1,6 @@
 {
   "name": "ils-test",
+  "homepage": "https://alexDose.github.io/ils-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,8 +30,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint": "eslint \"**/*.{ts, tsx}\"",
+    "lint:fix": "eslint \"**/*.{ts, tsx}\" --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -56,6 +59,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "sass": "^1.64.1",
     "typescript": "^5.1.6"
   }

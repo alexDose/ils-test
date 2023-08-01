@@ -1,10 +1,10 @@
 import { createSelector } from '@reduxjs/toolkit'
-import {RootState} from "../store";
-import {RoutesProps} from "../../types";
+import { type RootState } from '../store'
+import { type RoutesProps } from '../../types'
 
 export const getRoutes = (state: RootState): RoutesProps[] => (
-    state.routes
+  state.routes
 )
 export const getRoute = createSelector([getRoutes], route => (
-    route.filter(route => route.isSelected)
+  route.filter(route => route.isSelected)
 ))

@@ -10,7 +10,7 @@ import {ErrorNotification} from "./components/ErrorNotification/ErrorNotificatio
 function App() {
     const isLoading = useAppSelector(getIsLoading)
 
-    return(
+    return (
         <Layout>
             <ErrorNotification/>
             <Header className={styles.header}>ILS-test</Header>

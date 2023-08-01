@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {CoordinatesProps} from "../../types";
+import { type CoordinatesProps } from '../../types'
 
 const initialState: CoordinatesProps = {
-    coordinates: [],
+  coordinates: []
 }
 
 const coordinatesSlice = createSlice({
-    name: 'coordinates',
-    initialState,
-    reducers: {
-        setСoordinates(state: CoordinatesProps, action) {
-            state.coordinates = action.payload
-        },
-    },
+  name: 'coordinates',
+  initialState,
+  reducers: {
+    setСoordinates (state: CoordinatesProps, action) {
+      state.coordinates = action.payload
+    }
+  }
 })
 
 export const { setСoordinates } = coordinatesSlice.actions
