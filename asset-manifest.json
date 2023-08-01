@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ils-test/static/css/main.b2124847.css",
+    "main.js": "/ils-test/static/js/main.64c72bc4.js",
+    "index.html": "/ils-test/index.html",
+    "main.b2124847.css.map": "/ils-test/static/css/main.b2124847.css.map",
+    "main.64c72bc4.js.map": "/ils-test/static/js/main.64c72bc4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2124847.css",
+    "static/js/main.64c72bc4.js"
+  ]
+}
